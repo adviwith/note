@@ -101,7 +101,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 [contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
 .math { font-size: 1rem; }
 .md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
 .md-toc-content { position: relative; margin-left: 0px; }
@@ -240,7 +240,7 @@ th, td { border: 1px solid rgb(71, 77, 84); }
 .md-task-list-item > input { top: auto; }
 .md-task-list-item > input::before { content: ""; display: inline-block; width: 0.875rem; height: 0.875rem; vertical-align: middle; text-align: center; border: 1px solid rgb(184, 191, 198); background-color: rgb(54, 59, 64); margin-top: -0.4rem; }
 .md-task-list-item > input:checked::before, .md-task-list-item > input[checked]::before { content: "√"; font-size: 0.625rem; line-height: 0.625rem; color: rgb(222, 222, 222); }
-.CodeMirror-gutters { background: transparent; border-right: 1px solid transparent; }
+.CodeMirror-gutters { background: var(--bg-color); border-right: 1px solid transparent; }
 .auto-suggest-container { border: 0px; background-color: rgb(82, 92, 101); }
 #typora-quick-open { background-color: rgb(82, 92, 101); }
 #typora-quick-open input { background-color: rgb(82, 92, 101); border-width: 0px 0px 1px; border-top-style: initial; border-right-style: initial; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-left-color: initial; border-image: initial; border-bottom-style: solid; border-bottom-color: grey; }
@@ -333,8 +333,9 @@ footer { color: inherit; }
 .file-library-node.active > .file-node-background { background-color: var(--active-file-bg-color); }
 .file-list-item.active { background-color: var(--active-file-bg-color); }
 #ty-tooltip { background-color: black; color: rgb(238, 238, 238); }
-.md-task-list-item > input { margin-left: -1.3em; margin-top: calc(1rem - 10px); -webkit-appearance: none; }
+.md-task-list-item > input { margin-left: -1.3em; margin-top: 0.3rem; -webkit-appearance: none; }
 .md-mathjax-midline { background-color: rgb(87, 97, 107); border-bottom: none; }
+footer.ty-footer { border-color: rgb(101, 101, 101); }
 
 
 
@@ -344,6 +345,6 @@ footer { color: inherit; }
 </style>
 </head>
 <body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><h3><a name='header-n0' class='md-header-anchor '></a>강의</h3><p>강의 자료가 가상대학에 올라오는거같음, 무조건 해당 자료들 나오자말자 보고, 인쇄</p><p>강의때 녹음을 한 다음에 정리 못한 부분은 녹음 다시 들으면서 체크, 녹음 파일은 용량이 그래도 좀 되는 것 같으니 (1시간 반?에 약 50~60정도?) 녹음파일은 그날그날 학교 오피스 계정에 업로드?</p><p>과제, 인터넷 수강은 뜨자말자 빨리 task올려서 해놓는걸로</p><p>강의자료, 바로 다음강의는 클립보드에 넣어놓고 지난 강의 자료는 파일에 넣기</p><p>&nbsp;</p><h3><a name='header-n7' class='md-header-anchor '></a>공부</h3><p>빈 시간에는 도서관에서 공부 : 수업 중간 공강이거나 밥먹으러 가거나 잠깐 갔다올 때에는 자리에 가방 놓고 갔다오는게  좋을듯, </p><p>4시 넘겨서 수업이 끝나는 날(화수목)은 되도록 오후 일정 잡지 않기, 복습까지 하고 나면 시간 없음</p><p>학교 갈때는 예습, 영어or불어공부 / 올때는 복습, 영어or불어공부</p><p>인터넷에서 검색해서 찾아볼 때 위키피디아는 항상 의심하고 부정확성을 가진다는 것을 인지하기, 참고는 충분히 가능하지만 그 이상으로 인용과 같은 식으로 사용하지 말기, 필요한 경우에는 위키가 근거로 든 논문과 같은 내용들을 읽어서 그것을 근거로 삼기</p><p>구글 task로 복습루틴 할 때 [0] [1] [3] [6] [15] [30] 이렇게 하기 / [0]은 그날 공부한거 정리하는거고, 세부정보에는 공부한 내용=복습할 내용 적기 / 복습 끝내면 완료로 하는 것이 아니라 날짜 계산해서 다음 복습일로 기한 정해놓기 / 메인 Tasks 목록에 항상 Review ! 테스크 만들어놓기</p><p>&nbsp;</p><h3><a name='header-n14' class='md-header-anchor '></a>활동 등</h3><p>팀플 등 할때 협업 메일은 <a href='mailto:psdae62@gmail.com' target='_blank' class='url'>psdae62@gmail.com</a> 으로 사용하기, <a href='mailto:psd602@naver.com' target='_blank' class='url'>psd602@naver.com</a>은 다른 메일이랑 섞여서 좀 애매함</p><p>타 대학 활동에서도 <a href='mailto:psdae62@gmail.com' target='_blank' class='url'>psdae62@gmail.com</a>사용하기</p></div>
+<div  id='write'  class = 'is-node'><h3><a name='header-n0' class='md-header-anchor '></a>강의</h3><p>강의 자료가 가상대학에 올라오는거같음, 무조건 해당 자료들 나오자말자 보고, 인쇄</p><p>강의때 녹음을 한 다음에 정리 못한 부분은 녹음 다시 들으면서 체크, 녹음 파일은 용량이 그래도 좀 되는 것 같으니 (1시간 반?에 약 50~60정도?) 녹음파일은 그날그날 학교 오피스 계정에 업로드?</p><p>과제, 인터넷 수강은 뜨자말자 빨리 task올려서 해놓는걸로</p><p>강의자료, 바로 다음강의는 클립보드에 넣어놓고 지난 강의 자료는 파일에 넣기</p><p>&nbsp;</p><h3><a name='header-n7' class='md-header-anchor '></a>공부</h3><p>빈 시간에는 도서관에서 공부 : 수업 중간 공강이거나 밥먹으러 가거나 잠깐 갔다올 때에는 자리에 가방 놓고 갔다오는게  좋을듯, </p><p>4시 넘겨서 수업이 끝나는 날(화수목)은 되도록 오후 일정 잡지 않기, 복습까지 하고 나면 시간 없음</p><p>학교 갈때는 예습, 영어or불어공부 / 올때는 복습, 영어or불어공부</p><p>인터넷에서 검색해서 찾아볼 때 위키피디아는 항상 의심하고 부정확성을 가진다는 것을 인지하기, 참고는 충분히 가능하지만 그 이상으로 인용과 같은 식으로 사용하지 말기, 필요한 경우에는 위키가 근거로 든 논문과 같은 내용들을 읽어서 그것을 근거로 삼기</p><p>구글 task로 복습루틴 할 때 [0] [1] [3] [6] [15] [30] 이렇게 하기 / [0]은 그날 공부한거 정리하는거고, 세부정보에는 공부한 내용=복습할 내용 적기 / 복습 끝내면 완료로 하는 것이 아니라 날짜 계산해서 다음 복습일로 기한 정해놓기 / 메인 Tasks 목록에 항상 Review ! 테스크 만들어놓기</p><p>온라인에 올려서 보는거 오타나올때 바로바로 메모해놓기</p><p>&nbsp;</p><h3><a name='header-n15' class='md-header-anchor '></a>활동 등</h3><p>팀플 등 할때 협업 메일은 <a href='mailto:psdae62@gmail.com' target='_blank' class='url'>psdae62@gmail.com</a> 으로 사용하기, <a href='mailto:psd602@naver.com' target='_blank' class='url'>psd602@naver.com</a>은 다른 메일이랑 섞여서 좀 애매함</p><p>타 대학 활동에서도 <a href='mailto:psdae62@gmail.com' target='_blank' class='url'>psdae62@gmail.com</a>사용하기</p></div>
 </body>
 </html>
